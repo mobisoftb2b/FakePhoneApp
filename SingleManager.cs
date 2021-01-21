@@ -59,6 +59,28 @@ namespace FakePhoneApp
             }
         }
 
+
+        public void sendLog(string fileName, string fileContent) {
+            if (isBound)
+            {
+                m.SendMessage($@"{{""command"":""sendLog"",  ""FileData"":""{fileContent}"", ""FileName"":""{fileName}"", ""MessageId"": ""1606209433167"", ""testNumber"": ""{TestNumber}"", ""ManagerID"":""44107"", ""ManagerEmplId"":""{ManagerEmplId}"",""deviceInfo"":{{""DeviceUniqueID"":""{DeviceUniqueID}"",""DeviceBrand"":""google"",""AppVersion"":""1.2.0.14"",""DeviceName"":"""",""SystemName"":""Android""}},""deviceUniqueID"":""{DeviceUniqueID}"",""QueueName"":""{queueName}""}}", queueNameGlobal, TestNumber);
+            }
+        }
+
+        public void received(String agentLogId)
+        {
+            if (isBound)
+            {
+                m.SendMessage($@"{{""command"":""received"",  ""RequestStatus"":  ""1"", ""AgentMessageId"": ""{agentLogId}"", ""MessageId"": ""1606209433167"", ""testNumber"": ""{TestNumber}"", ""ManagerID"":""44107"", ""ManagerEmplId"":""{ManagerEmplId}"",""deviceInfo"":{{""DeviceUniqueID"":""{DeviceUniqueID}"",""DeviceBrand"":""google"",""AppVersion"":""1.2.0.14"",""DeviceName"":"""",""SystemName"":""Android""}},""deviceUniqueID"":""{DeviceUniqueID}"",""QueueName"":""{queueName}""}}", queueNameGlobal, TestNumber);
+            }
+        }
+        public void loginUserWrong()
+        {
+            if (isBound)
+            {
+                m.SendMessage($@"{{""command"":""loginUser"",  ""MessageId"": ""1606209433167"", ""ManagerID"":""104"",""ManagerEmplId"":""Rtuu"", ""Password"": ""Rtuu"",  ""QueueName"":""{queueName}"",""deviceInfo"":{{""DeviceUniqueID"":""{DeviceUniqueID}"",""DeviceBrand"":""google"",""AppVersion"":""1.2.0.14"",""DeviceName"":"""",""SystemName"":""Android""}},""pushToken"":""ch_rzpWcTvqzFFxqrws2ZV:APA91bEJ3kqrXSYpAMspdOKBxA_L1ByMT75eFcHISlJHPyJuUo6_ihaaJaN0f1f1tsWosnqkdMSbyV5rkEFdnD7uzqDKy3lzEi91QqxxW1qdLgrNCYTwGxoIKgSG-W1kXQTp9zwD6G43""}}", queueNameGlobal, TestNumber);
+            }
+        }
         public void login()
         {
             if (isBound)

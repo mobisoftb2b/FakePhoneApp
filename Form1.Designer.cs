@@ -39,6 +39,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnLoginUser = new System.Windows.Forms.Button();
             this.btnRefreshSveta = new System.Windows.Forms.Button();
+            this.btnLoginWrong = new System.Windows.Forms.Button();
+            this.btnSendFile = new System.Windows.Forms.Button();
+            this.txtFileName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtFileContent = new System.Windows.Forms.TextBox();
+            this.Content = new System.Windows.Forms.Label();
+            this.btnReceived = new System.Windows.Forms.Button();
+            this.txtAgentLogID = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // login
@@ -63,9 +72,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(69, 177);
+            this.richTextBox1.Location = new System.Drawing.Point(69, 280);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(670, 237);
+            this.richTextBox1.Size = new System.Drawing.Size(670, 295);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
@@ -203,7 +212,7 @@
             // 
             // btnRefreshSveta
             // 
-            this.btnRefreshSveta.Location = new System.Drawing.Point(338, 81);
+            this.btnRefreshSveta.Location = new System.Drawing.Point(309, 81);
             this.btnRefreshSveta.Name = "btnRefreshSveta";
             this.btnRefreshSveta.Size = new System.Drawing.Size(75, 23);
             this.btnRefreshSveta.TabIndex = 17;
@@ -211,11 +220,98 @@
             this.btnRefreshSveta.UseVisualStyleBackColor = true;
             this.btnRefreshSveta.Click += new System.EventHandler(this.btnRefreshSveta_Click);
             // 
+            // btnLoginWrong
+            // 
+            this.btnLoginWrong.Location = new System.Drawing.Point(527, 81);
+            this.btnLoginWrong.Name = "btnLoginWrong";
+            this.btnLoginWrong.Size = new System.Drawing.Size(75, 23);
+            this.btnLoginWrong.TabIndex = 18;
+            this.btnLoginWrong.Text = "LoginWrong";
+            this.btnLoginWrong.UseVisualStyleBackColor = true;
+            this.btnLoginWrong.Click += new System.EventHandler(this.btnLoginWrong_Click);
+            // 
+            // btnSendFile
+            // 
+            this.btnSendFile.Location = new System.Drawing.Point(433, 188);
+            this.btnSendFile.Name = "btnSendFile";
+            this.btnSendFile.Size = new System.Drawing.Size(104, 23);
+            this.btnSendFile.TabIndex = 19;
+            this.btnSendFile.Text = "SendFile";
+            this.btnSendFile.UseVisualStyleBackColor = true;
+            this.btnSendFile.Click += new System.EventHandler(this.btnSendFile_Click);
+            // 
+            // txtFileName
+            // 
+            this.txtFileName.Location = new System.Drawing.Point(80, 191);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(100, 20);
+            this.txtFileName.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(80, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "FileName";
+            // 
+            // txtFileContent
+            // 
+            this.txtFileContent.Location = new System.Drawing.Point(191, 191);
+            this.txtFileContent.Name = "txtFileContent";
+            this.txtFileContent.Size = new System.Drawing.Size(209, 20);
+            this.txtFileContent.TabIndex = 22;
+            // 
+            // Content
+            // 
+            this.Content.AutoSize = true;
+            this.Content.Location = new System.Drawing.Point(204, 175);
+            this.Content.Name = "Content";
+            this.Content.Size = new System.Drawing.Size(44, 13);
+            this.Content.TabIndex = 23;
+            this.Content.Text = "Content";
+            // 
+            // btnReceived
+            // 
+            this.btnReceived.Location = new System.Drawing.Point(351, 234);
+            this.btnReceived.Name = "btnReceived";
+            this.btnReceived.Size = new System.Drawing.Size(75, 23);
+            this.btnReceived.TabIndex = 24;
+            this.btnReceived.Text = "Received";
+            this.btnReceived.UseVisualStyleBackColor = true;
+            this.btnReceived.Click += new System.EventHandler(this.btnReceived_Click);
+            // 
+            // txtAgentLogID
+            // 
+            this.txtAgentLogID.Location = new System.Drawing.Point(84, 237);
+            this.txtAgentLogID.Name = "txtAgentLogID";
+            this.txtAgentLogID.Size = new System.Drawing.Size(247, 20);
+            this.txtAgentLogID.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(81, 221);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "AgentLogId";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 596);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtAgentLogID);
+            this.Controls.Add(this.btnReceived);
+            this.Controls.Add(this.Content);
+            this.Controls.Add(this.txtFileContent);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtFileName);
+            this.Controls.Add(this.btnSendFile);
+            this.Controls.Add(this.btnLoginWrong);
             this.Controls.Add(this.btnRefreshSveta);
             this.Controls.Add(this.btnLoginUser);
             this.Controls.Add(this.label3);
@@ -261,6 +357,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLoginUser;
         private System.Windows.Forms.Button btnRefreshSveta;
+        private System.Windows.Forms.Button btnLoginWrong;
+        private System.Windows.Forms.Button btnSendFile;
+        private System.Windows.Forms.TextBox txtFileName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtFileContent;
+        private System.Windows.Forms.Label Content;
+        private System.Windows.Forms.Button btnReceived;
+        private System.Windows.Forms.TextBox txtAgentLogID;
+        private System.Windows.Forms.Label label5;
     }
 }
 

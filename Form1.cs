@@ -112,5 +112,20 @@ namespace FakePhoneApp
         {
             sm.refreshSveta();
         }
+
+        private void btnLoginWrong_Click(object sender, EventArgs e)
+        {
+            sm.loginUserWrong();
+        }
+
+        private void btnSendFile_Click(object sender, EventArgs e)
+        {
+            sm.sendLog(txtFileName.Text, txtFileContent.Text);
+        }
+
+        private void btnReceived_Click(object sender, EventArgs e)
+        {
+            sm.received(txtAgentLogID.Text);
+        }
     }
 }
