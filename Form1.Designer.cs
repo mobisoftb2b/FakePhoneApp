@@ -48,6 +48,8 @@
             this.btnReceived = new System.Windows.Forms.Button();
             this.txtAgentLogID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnLoginNew = new System.Windows.Forms.Button();
+            this.btnLoginUserNew = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // login
@@ -80,7 +82,7 @@
             // 
             // logout
             // 
-            this.logout.Location = new System.Drawing.Point(216, 42);
+            this.logout.Location = new System.Drawing.Point(256, 42);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(75, 23);
             this.logout.TabIndex = 3;
@@ -222,7 +224,7 @@
             // 
             // btnLoginWrong
             // 
-            this.btnLoginWrong.Location = new System.Drawing.Point(527, 81);
+            this.btnLoginWrong.Location = new System.Drawing.Point(453, 81);
             this.btnLoginWrong.Name = "btnLoginWrong";
             this.btnLoginWrong.Size = new System.Drawing.Size(75, 23);
             this.btnLoginWrong.TabIndex = 18;
@@ -298,11 +300,33 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "AgentLogId";
             // 
+            // btnLoginNew
+            // 
+            this.btnLoginNew.Location = new System.Drawing.Point(161, 42);
+            this.btnLoginNew.Name = "btnLoginNew";
+            this.btnLoginNew.Size = new System.Drawing.Size(75, 23);
+            this.btnLoginNew.TabIndex = 27;
+            this.btnLoginNew.Text = "LoginNew";
+            this.btnLoginNew.UseVisualStyleBackColor = true;
+            this.btnLoginNew.Click += new System.EventHandler(this.btnLoginNew_Click);
+            // 
+            // btnLoginUserNew
+            // 
+            this.btnLoginUserNew.Location = new System.Drawing.Point(547, 81);
+            this.btnLoginUserNew.Name = "btnLoginUserNew";
+            this.btnLoginUserNew.Size = new System.Drawing.Size(88, 23);
+            this.btnLoginUserNew.TabIndex = 28;
+            this.btnLoginUserNew.Text = "LoginUserNew";
+            this.btnLoginUserNew.UseVisualStyleBackColor = true;
+            this.btnLoginUserNew.Click += new System.EventHandler(this.btnLoginUserNew_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 596);
+            this.Controls.Add(this.btnLoginUserNew);
+            this.Controls.Add(this.btnLoginNew);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtAgentLogID);
             this.Controls.Add(this.btnReceived);
@@ -366,6 +390,8 @@
         private System.Windows.Forms.Button btnReceived;
         private System.Windows.Forms.TextBox txtAgentLogID;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnLoginNew;
+        private System.Windows.Forms.Button btnLoginUserNew;
     }
 }
 

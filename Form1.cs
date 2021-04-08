@@ -127,5 +127,15 @@ namespace FakePhoneApp
         {
             sm.received(txtAgentLogID.Text);
         }
+
+        private void btnLoginNew_Click(object sender, EventArgs e)
+        {
+            sm.loginNew();
+        }
+
+        private void btnLoginUserNew_Click(object sender, EventArgs e)
+        {
+            sm.loginUserNew();
+        }
     }
 }

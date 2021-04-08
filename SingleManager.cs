@@ -59,6 +59,13 @@ namespace FakePhoneApp
             }
         }
 
+        public void loginUserNew()
+        {
+            if (isBound)
+            {
+                m.SendMessage($@"{{""command"":""loginUserNew"",  ""MessageId"": ""1606209433167"", ""ManagerID"":""104"",""ManagerEmplId"":""{ManagerEmplId}"", ""Password"": ""2480"",  ""QueueName"":""{queueName}"",""deviceInfo"":{{""DeviceUniqueID"":""{DeviceUniqueID}"",""DeviceBrand"":""google"",""AppVersion"":""1.2.0.14"",""DeviceName"":"""",""SystemName"":""Android""}},""pushToken"":""ch_rzpWcTvqzFFxqrws2ZV:APA91bEJ3kqrXSYpAMspdOKBxA_L1ByMT75eFcHISlJHPyJuUo6_ihaaJaN0f1f1tsWosnqkdMSbyV5rkEFdnD7uzqDKy3lzEi91QqxxW1qdLgrNCYTwGxoIKgSG-W1kXQTp9zwD6G43""}}", queueNameGlobal, TestNumber);
+            }
+        }
 
         public void sendLog(string fileName, string fileContent) {
             if (isBound)
@@ -90,7 +97,15 @@ namespace FakePhoneApp
             }
         }
 
-        
+        public void loginNew()
+        {
+            if (isBound)
+            {
+                m.SendMessage($@"{{""command"":""loginNew"", ""MessageId"": ""1606209433167"", ""testNumber"": ""{TestNumber}"", ""ManagerID"":""104"",""ManagerEmplId"":""{ManagerEmplId}"", ""QueueName"":""{queueName}"",""deviceInfo"":{{""DeviceUniqueID"":""{DeviceUniqueID}"",""DeviceBrand"":""google"",""AppVersion"":""1.2.0.14"",""DeviceName"":"""",""SystemName"":""Android""}},""pushToken"":""ch_rzpWcTvqzFFxqrws2ZV:APA91bEJ3kqrXSYpAMspdOKBxA_L1ByMT75eFcHISlJHPyJuUo6_ihaaJaN0f1f1tsWosnqkdMSbyV5rkEFdnD7uzqDKy3lzEi91QqxxW1qdLgrNCYTwGxoIKgSG-W1kXQTp9zwD6G43""}}", queueNameGlobal, TestNumber);
+                System.Diagnostics.Debug.WriteLine($"login testNumber {TestNumber}");
+            }
+        }
+
         public void Close()
         {
             m.Close();
